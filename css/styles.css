@@ -636,6 +636,53 @@ img {
 .features-tittle {
   margin-bottom: 4px;
 }
+.box {
+  position: relative;
+  overflow: hidden;
+}
+.box::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.flex-features .features-text {
+  width: 100%;
+  padding: 63px 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--primary-white-color);
+  font-size: 18px;
+  line-height: 1.55;
+  opacity: 0;
+}
+.features-padding a:hover .features-text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.features-padding a:hover .box::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.features-padding a:focus .features-text {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.features-padding a:focus .box::before {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 /* footer */
 .footer-container {
