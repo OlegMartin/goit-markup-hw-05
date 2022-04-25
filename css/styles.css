@@ -277,6 +277,8 @@ img {
   width: 30px;
   height: 30px;
 
+  cursor: pointer;
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-white-color);
   border-radius: 50%;
@@ -398,6 +400,10 @@ img {
 }
 
 .action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   bottom: 0;
   left: 0;
   width: 370px;
@@ -408,12 +414,10 @@ img {
 .action-tittle {
   display: flex;
   justify-content: center;
-  margin: 27px 0;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-white-color);
@@ -461,6 +465,7 @@ img {
 .icon-media {
   color: var(--accent-color);
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .team {
@@ -579,7 +584,9 @@ img {
   background-color: var(--background-color);
   color: var(--primery-text-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0s;
 }
 
 .button.portfolio:hover,
